@@ -1,18 +1,19 @@
-# 🦁 Natures-Legacy – Animal National Park Website
+# 🎵 SonicTunes – Laravel Music Player Website
 
-An interactive, wildlife-themed website designed to showcase animal species, manage safari bookings, and provide a seamless visitor experience.  
-Built with **HTML**, **CSS**, **Bootstrap**, **PHP**, and **MySQL**.
+A modern, dynamic **online music streaming platform** built with **Laravel** and **MySQL**, designed for smooth audio playback and robust content management.  
+Features a **custom-designed user interface** and a powerful **admin panel** for managing songs, albums, artists, and playlists.
 
 ---
 
 ## 🌟 Features
 
-- **Wildlife Showcase** – Beautiful image galleries and detailed species information.
-- **Safari Booking System** – Online booking with secure processing.
-- **Visitor Interaction** – Contact forms, reviews, FAQs, and feedback submissions.
-- **Role-Based Access** – Admin, Registered User, Visitor roles for better management.
-- **Responsive UI** – Optimized for mobile, tablet, and desktop devices.
-- **Secure Access Control** – Authentication and authorization for different user types.
+- **🎶 Music Playback** – Seamless play, pause, next, and previous controls.
+- **📂 Song Management** – Admin can add, edit, and delete songs.
+- **🎤 Artist & Album Management** – Organize songs by artist, genre, and album.
+- **📱 Responsive UI** – Fully optimized for desktop, tablet, and mobile devices.
+- **🎨 Custom Design** – Unique, hand-crafted interface for both user and admin sides.
+- **🔍 Advanced Search** – Find songs by title, artist, genre, or album.
+- **🎧 Playlist Support** – Users can browse songs grouped in playlists.
 
 ---
 
@@ -20,123 +21,113 @@ Built with **HTML**, **CSS**, **Bootstrap**, **PHP**, and **MySQL**.
 
 | Category       | Technologies |
 |----------------|--------------|
-| Frontend       | HTML, CSS, Bootstrap |
-| Backend        | PHP |
+| Framework      | Laravel 10+ |
+| Backend        | PHP 8+ |
 | Database       | MySQL |
+| Frontend       | HTML, CSS, Bootstrap, JavaScript |
+| Audio Playback | HTML5 Audio API |
 | Version Control| Git, GitHub |
-| Hosting (Local)| XAMPP / WAMP |
+| Hosting (Local)| XAMPP / Laravel Valet / Artisan Serve |
 
 ---
-
-## 📂 Project Structure
-
-Natures-Legacy/
-│
-├── assets/ # Images, CSS, JS files
-├── pages/ # All main PHP pages
-├── includes/ # Header, footer, reusable components
-├── database/ # DB connection and SQL scripts
-├── natures_legacy.sql # Database export file
-└── README.md # Project documentation
-
-yaml
-Copy
-Edit
-
 ---
 
 ## 🚀 Getting Started
 
-Follow these steps to run the project locally.
+Follow these steps to set up the project locally:
 
 ### 1️⃣ Clone the Repository
 
-git clone https://github.com/your-username/natures-legacy.git
-2️⃣ Setup the Database
-Open phpMyAdmin.
+git clone https://github.com/your-username/sonictunes.git
 
-Create a new database named natures_legacy.
+2️⃣ Install Dependencies
 
-Import the provided natures_legacy.sql file.
+cd sonictunes
 
-3️⃣ Configure the Database Connection
-Go to database/config.php and update with your MySQL credentials:
+composer install
 
-php
+npm install && npm run dev
 
-<?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "natures_legacy";
+3️⃣ Configure the Environment
 
-$conn = mysqli_connect($host, $user, $pass, $dbname);
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-?>
-4️⃣ Run the Project
-Place the project folder inside htdocs (for XAMPP) or www (for WAMP).
+Copy .env.example to .env:
 
-Start Apache and MySQL from your server control panel.
 
-Open in your browser:
+cp .env.example .env
 
-arduino
+Update .env with your database credentials:
 
-http://localhost/natures-legacy
+DB_CONNECTION=mysql
+
+DB_HOST=127.0.0.1
+
+DB_PORT=3306
+
+DB_DATABASE=sonictunes_db
+
+DB_USERNAME=root
+
+DB_PASSWORD=
+
+
+4️⃣ Run Migrations & Seed Data
+
+php artisan migrate --seed
+
+5️⃣ Serve the Application
+
+
+php artisan serve
+Open in browser:
+
+http://127.0.0.1:8000
+
 👥 User Roles
 Admin
+Add, edit, and delete songs.
 
-Manage wildlife species data.
+Manage artists, albums, and genres.
 
-Approve/decline safari bookings.
+Organize playlists.
 
-Manage user reviews and feedback.
+View all uploaded tracks.
 
-Registered User
+User
+Browse and stream songs.
 
-Book safaris.
+Search by title, artist, genre, or album.
 
-Submit reviews and feedback.
-
-Access member-exclusive features.
-
-Visitor
-
-Browse wildlife showcase.
-
-View public content.
-
-Example:
+Play songs with smooth navigation.
 
 
 📜 License
-This project is licensed for educational purposes only.
-You may use and modify it for personal or institutional use.
+This project is licensed for educational and personal use only.
+For commercial use, please contact the author.
 
 🤝 Contributing
 Fork the repository.
 
-Create your feature branch:
+Create a new branch:
 
 git checkout -b feature/YourFeature
 Commit your changes:
 
-
 git commit -m "Add YourFeature"
-Push to the branch:
-
+Push the branch:
 
 git push origin feature/YourFeature
 Open a Pull Request.
 
-💡 Author
-Your Name
+💡 Author Jainam Saraiya
+
 📧 Email: jainamsaraiya9@gmail.com
-💼 LinkedIn: [https://www.linkedin.com/in/jainam-bharvad]
+
+🌐 Portfolio: [https://www.linkedin.com/in/jainam-bharvad]
+
+💼 LinkedIn: [your-linkedin-link]
 
 
+---
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
