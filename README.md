@@ -38,7 +38,7 @@ Follow these steps to set up the project locally:
 
 ### 1️⃣ Clone the Repository
 
-git clone https://github.com/your-username/sonictunes.git
+git clone https://github.com/jainambharvad9/SonicTunes-Music-Player-Website.git
 
 2️⃣ Install Dependencies
 
