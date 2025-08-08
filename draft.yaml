@@ -1,0 +1,50 @@
+models:
+  User:
+    name: string
+    email: string unique
+    password: string
+    timestamps: true
+
+  Song:
+    title: string
+    artist_id: id foreign:artists
+    album_id: id foreign:albums nullable
+    genre: string nullable
+    file_path: string
+    cover_image: string nullable
+    duration: time
+    timestamps: true
+
+  Artist:
+    name: string
+    bio: text nullable
+    timestamps: true
+
+  Album:
+    name: string
+    artist_id: id foreign:artists
+    release_date: date nullable
+    cover_image: string nullable
+    timestamps: true
+
+  Playlist:
+    user_id: id foreign:users
+    name: string
+    description: text nullable
+    timestamps: true
+
+  PlaylistSong:
+    playlist_id: id foreign:playlists
+    song_id: id foreign:songs
+    timestamps: true
+
+  Favorite:
+    user_id: id foreign:users
+    song_id: id foreign:songs
+    timestamps: true
+
+  Admin:
+    name: string
+    email: string unique
+    password: string
+    timestamps: true

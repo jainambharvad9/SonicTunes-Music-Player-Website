@@ -1,0 +1,34 @@
+created:
+    - database/factories/UserFactory.php
+    - database/factories/SongFactory.php
+    - database/factories/ArtistFactory.php
+    - database/factories/AlbumFactory.php
+    - database/factories/PlaylistFactory.php
+    - database/factories/PlaylistSongFactory.php
+    - database/factories/FavoriteFactory.php
+    - database/factories/AdminFactory.php
+    - database/migrations/2025_02_11_132902_create_users_table.php
+    - database/migrations/2025_02_11_132903_create_songs_table.php
+    - database/migrations/2025_02_11_132904_create_artists_table.php
+    - database/migrations/2025_02_11_132905_create_albums_table.php
+    - database/migrations/2025_02_11_132906_create_playlists_table.php
+    - database/migrations/2025_02_11_132907_create_playlist_songs_table.php
+    - database/migrations/2025_02_11_132908_create_favorites_table.php
+    - database/migrations/2025_02_11_132909_create_admins_table.php
+    - app/Models/User.php
+    - app/Models/Song.php
+    - app/Models/Artist.php
+    - app/Models/Album.php
+    - app/Models/Playlist.php
+    - app/Models/PlaylistSong.php
+    - app/Models/Favorite.php
+    - app/Models/Admin.php
+models:
+    User: { name: string, email: 'string unique', password: string, timestamps: timestamps }
+    Song: { title: string, artist_id: 'id foreign:artists', album_id: 'id foreign:albums nullable', genre: 'string nullable', file_path: string, cover_image: 'string nullable', duration: time, timestamps: timestamps }
+    Artist: { name: string, bio: 'text nullable', timestamps: timestamps }
+    Album: { name: string, artist_id: 'id foreign:artists', release_date: 'date nullable', cover_image: 'string nullable', timestamps: timestamps }
+    Playlist: { user_id: 'id foreign:users', name: string, description: 'text nullable', timestamps: timestamps }
+    PlaylistSong: { playlist_id: 'id foreign:playlists', song_id: 'id foreign:songs', timestamps: timestamps }
+    Favorite: { user_id: 'id foreign:users', song_id: 'id foreign:songs', timestamps: timestamps }
+    Admin: { name: string, email: 'string unique', password: string, timestamps: timestamps }

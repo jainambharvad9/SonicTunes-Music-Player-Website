@@ -1,0 +1,78 @@
+/* Sidebar styling */
+.sidebar {
+    background-color: #121212;
+    color: #fff;
+    height: 100vh;
+    padding: 20px;
+}
+.sidebar .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1DB954;
+    text-decoration: none;
+}
+.sidebar .menu li {
+    list-style: none;
+    margin: 15px 0;
+}
+.sidebar .menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+.sidebar .menu li a.active {
+    color: #1DB954;
+}
+
+/* Main content styling */
+.main-content {
+    background-color: #181818;
+    color: #fff;
+    padding: 20px;
+}
+.header {
+    margin-bottom: 20px;
+}
+.search-bar input {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+}
+.user-actions a {
+    margin-left: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+.user-actions .btn-primary {
+    background-color: #1DB954;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+/* Mixes grid styling */
+.mixes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+.mix-card {
+    background-color: #282828;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+}
+.mix-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+.mix-info h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+.mix-info p {
+    font-size: 14px;
+    color: #b3b3b3;
+}
