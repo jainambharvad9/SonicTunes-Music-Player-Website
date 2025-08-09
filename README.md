@@ -36,95 +36,113 @@ Features a **custom-designed user interface** and a powerful **admin panel** for
 
 Follow these steps to set up the project locally:
 
-### 1️⃣ Clone the Repository
 
+**1️⃣ Clone the Repository**
+<br>
 git clone https://github.com/jainambharvad9/SonicTunes-Music-Player-Website.git
+<br>
 
-2️⃣ Install Dependencies
 
+**2️⃣ Install Dependencies**
+<br>
 cd sonictunes
-
+<br>
 composer install
-
+<br>
 npm install && npm run dev
+<br>
 
-3️⃣ Configure the Environment
 
+**3️⃣ Configure the Environment**
+<br>
 Copy .env.example to .env:
-
-
+<br>
 cp .env.example .env
-
+<br>
 Update .env with your database credentials:
-
+<br>
 DB_CONNECTION=mysql
-
+<br>
 DB_HOST=127.0.0.1
-
+<br>
 DB_PORT=3306
-
+<br>
 DB_DATABASE=sonictunes_db
-
+<br>
 DB_USERNAME=root
-
+<br>
 DB_PASSWORD=
+<br>
 
 
-4️⃣ Run Migrations & Seed Data
-
+**4️⃣ Run Migrations & Seed Data**
+<br>
 php artisan migrate --seed
+<br>
 
-5️⃣ Serve the Application
 
-
+**5️⃣ Serve the Application**
+<br>
 php artisan serve
-Open in browser:
+<br>
+Open in browser: http://127.0.0.1:8000
 
-http://127.0.0.1:8000
 
-👥 User Roles
-Admin
+**👥 User Roles**
+
+**Admin**
+<br>
 Add, edit, and delete songs.
-
+<br>
 Manage artists, albums, and genres.
-
+<br>
 Organize playlists.
-
+<br>
 View all uploaded tracks.
 
-User
+
+**User**
+<br>
 Browse and stream songs.
-
+<br>
 Search by title, artist, genre, or album.
-
+<br>
 Play songs with smooth navigation.
+<br>
 
 
-📜 License
+**📜 License**
+<br>
 This project is licensed for educational and personal use only.
 For commercial use, please contact the author.
+<br>
 
-🤝 Contributing
+
+**🤝 Contributing**
+<br>
 Fork the repository.
-
+<br>
 Create a new branch:
-
+<br>
 git checkout -b feature/YourFeature
+<br>
 Commit your changes:
-
+<br>
 git commit -m "Add YourFeature"
+<br>
 Push the branch:
-
+<br>
 git push origin feature/YourFeature
+<br>
 Open a Pull Request.
+<br>
 
-💡 Author Jainam Saraiya
 
-📧 Email: jainamsaraiya9@gmail.com
-
-🌐 Portfolio: [https://www.linkedin.com/in/jainam-bharvad]
-
-💼 LinkedIn: [your-linkedin-link]
+**💡 Author** Jainam Saraiya
+<br>
+**📧 Email:** jainamsaraiya9@gmail.com
+<br>
+**💼 LinkedIn:** [https://www.linkedin.com/in/jainam-bharvad]
 
 
 ---
